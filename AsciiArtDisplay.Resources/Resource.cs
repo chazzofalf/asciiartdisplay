@@ -16,6 +16,17 @@ namespace AsciiArtDisplay.Resources
         }
         public static void DrawToConsoleBackground()
         {
+            try
+            {
+                DrawToConsoleBackgroundUnsafe();
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Hmm... This does not seems to be a fully featured terminal. (Are you headless or using VSCode?) That's fine. Going on...");
+            }
+        }
+        private static void DrawToConsoleBackgroundUnsafe()
+        {
             var ci = GetConsoleImage();
             ci.WriteToConsole();
         }
