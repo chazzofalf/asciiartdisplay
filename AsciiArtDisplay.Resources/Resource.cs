@@ -14,6 +14,11 @@ namespace AsciiArtDisplay.Resources
                 return jpg_icon_data != null ? new MemoryStream(jpg_icon_data) : new MemoryStream(BuildIconData());
             }
         }
+        public static void DrawToConsoleBackground()
+        {
+            var ci = GetConsoleImage();
+            ci.WriteToConsole();
+        }
         public static string IconAsConsoleString()
         {
             return GetConsoleImage().ToString();
@@ -90,6 +95,7 @@ namespace AsciiArtDisplay.Resources
             private char GetShade(int x, int y)
             {
                 string shades = " ░▒▓█";
+                
                 char[] shadesArray = shades.ToCharArray();
                 byte pxl = GetPixel(x, y);
                 byte pxlrb = (byte)(255 / shadesArray.Length);
@@ -106,6 +112,25 @@ namespace AsciiArtDisplay.Resources
             private int GetStringLength()
             {
                 return Width * Height;
+            }
+            public  void WriteToConsole(int x,int y)
+            {
+                byte pxl = GetPixel(x, y);
+                DoWriteByteAsConsoleBackground(pxl);
+            }
+            public void WriteToConsole()
+            {
+                Enumerable.Range(0, GetStringLength()).Aggregate(null, (object prev, int next) =>
+                {
+                    WriteToConsole(next);
+                    return null;
+                });
+            }
+            public void WriteToConsole(int xy)
+            {
+                int y = xy / Width;
+                int x = xy % Width;
+                WriteToConsole(x, y);   
             }
             public override string ToString()
             {
@@ -163,6 +188,13 @@ namespace AsciiArtDisplay.Resources
         }
         public delegate IConsoleSize ConsoleSizeEvent();
         public static event ConsoleSizeEvent ConsoleSize;
+
+        public static void DoWriteByteAsConsoleBackground(byte value)
+        {
+            _ = MaskDelegateCall<object, WriteByteAsConsoleBackgroundEvent>(WriteByteAsConsoleBackground, value);
+        }
+        public delegate void WriteByteAsConsoleBackgroundEvent(byte value);
+        public static event WriteByteAsConsoleBackgroundEvent WriteByteAsConsoleBackground;
     }
     public interface IConsoleSize
     {

@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsciiArtDisplay.Windows", "AsciiArtDisplay.Windows\AsciiArtDisplay.Windows.csproj", "{D281090F-C583-4C29-BB61-23E84F973EB0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AsciiArtDisplay.Resources", "AsciiArtDisplay.Resources\AsciiArtDisplay.Resources.csproj", "{B659B348-0A74-4BEB-802A-F7D643ECEF54}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsciiArtDisplay.Resources", "AsciiArtDisplay.Resources\AsciiArtDisplay.Resources.csproj", "{B659B348-0A74-4BEB-802A-F7D643ECEF54}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsciiArtDisplay.Universal", "AsciiArtDisplay.Universal\AsciiArtDisplay.Universal.csproj", "{6A5CCD59-36C4-4543-9634-67C5C681472C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsciiArtDisplay.Windows.Application", "AsciiArtDisplay.Windows.Application\AsciiArtDisplay.Windows.Application.csproj", "{60914630-114C-44E9-A6EC-7D3CEF0450E4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsciiArtDisplay.Universal.Application", "AsciiArtDisplay.Universal.Application\AsciiArtDisplay.Universal.Application.csproj", "{E750DA49-9314-4BC4-9333-D495A5D12732}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,18 +15,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D281090F-C583-4C29-BB61-23E84F973EB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D281090F-C583-4C29-BB61-23E84F973EB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D281090F-C583-4C29-BB61-23E84F973EB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D281090F-C583-4C29-BB61-23E84F973EB0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B659B348-0A74-4BEB-802A-F7D643ECEF54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B659B348-0A74-4BEB-802A-F7D643ECEF54}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B659B348-0A74-4BEB-802A-F7D643ECEF54}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B659B348-0A74-4BEB-802A-F7D643ECEF54}.Release|Any CPU.Build.0 = Release|Any CPU
-		{60914630-114C-44E9-A6EC-7D3CEF0450E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{60914630-114C-44E9-A6EC-7D3CEF0450E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{60914630-114C-44E9-A6EC-7D3CEF0450E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{60914630-114C-44E9-A6EC-7D3CEF0450E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A5CCD59-36C4-4543-9634-67C5C681472C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A5CCD59-36C4-4543-9634-67C5C681472C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A5CCD59-36C4-4543-9634-67C5C681472C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A5CCD59-36C4-4543-9634-67C5C681472C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E750DA49-9314-4BC4-9333-D495A5D12732}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E750DA49-9314-4BC4-9333-D495A5D12732}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E750DA49-9314-4BC4-9333-D495A5D12732}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E750DA49-9314-4BC4-9333-D495A5D12732}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

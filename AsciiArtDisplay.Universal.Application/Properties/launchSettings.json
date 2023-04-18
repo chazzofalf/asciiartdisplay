@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "AsciiArtDisplay.Universal.Application": {
+      "commandName": "Project",
+      "remoteDebugEnabled": false,
+      "remoteDebugMachine": "chazz"
+    }
+  }
+}
